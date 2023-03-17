@@ -1,0 +1,6 @@
+rajritik200177
+zCmEmuEDk2d3dK83
+
+
+
+mongodb+srv://rajritik200177:<password>@cluster0.yyefuuu.mongodb.net/?retryWrites=true&w=majority
