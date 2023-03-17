@@ -58,6 +58,19 @@ router.put('/bulb/:id',async function (req,res){
     
 
 })
+
+router.get('/:id',async function (req,res){
+    const { id } = req.params
+    if (!mongoose.Types.ObjectId.isValid(id)) {
+        return res.status(400).json({error: 'No such Id found'})
+      }
+      const dataBulb = await Sensors.findById(id);
+       if (!dataBulb) {
+        return res.status(400).json({error: 'No such Sensor'})
+      }
+
+      res.status(200).json(dataBulb)
+})
 router.put("/:id",async function (req,res){
     const { id } = req.params
     // const {temperature,humidity,moisture,ppm} = req.body
@@ -78,6 +91,8 @@ router.put("/:id",async function (req,res){
       res.status(200).json(sensorData)
     
 })
+
+
 
 
 module.exports = router

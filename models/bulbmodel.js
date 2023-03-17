@@ -3,7 +3,7 @@ const Schema = mongoose.Schema
 
 const bulbSchema = new Schema({
     bulb:{
-        type:Boolean,
+        type:String,
         require:true
     }})
 
